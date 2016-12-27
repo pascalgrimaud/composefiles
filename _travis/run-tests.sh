@@ -25,7 +25,7 @@ elif [[ "$APP" == "jhipster-registry" ]]; then
 
     cd ../jhipster-gateway
     docker-compose up -d
-    sleep 30
+    sleep 60
     docker-compose logs
     curl -v http://localhost:8088
 fi
