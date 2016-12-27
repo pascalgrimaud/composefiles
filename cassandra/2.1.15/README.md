@@ -21,7 +21,7 @@ To execute CQL files with a shell script, edit:
 - `migration.sh` to execute the appropriate CQL files you want
 - `cql/` folder, which contains all CQL files to be executed
 
-You can use the `cqlsh` tool:
-- `./cqlsh`
-- `./cqlsh -e "select * from system.schema_keyspaces"`
-- `./cqlsh -e "describe table system.schema_keyspaces"`
+You can use the `dcqlsh` tool (similar to cqlsh, but with Docker):
+- `./dcqlsh`
+- `./dcqlsh -e "select * from system.schema_keyspaces"`
+- `./dcqlsh -e "describe table system.schema_keyspaces"`

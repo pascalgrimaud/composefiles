@@ -2,14 +2,14 @@
 
 CASSANDRA_DOCKER_IMAGE=cassandra:2.1.15
 
-function cqlsh() {
+function dcqlsh() {
     docker run --name=cqlsh --network=host --volume=$(pwd):/cql:ro --workdir=/cql --rm -it "$CASSANDRA_DOCKER_IMAGE" cqlsh "$@"
 }
 
 echo 'Create Keyspace: test'
-cqlsh -f scripts_cql/create-keyspace.cql
+dcqlsh -f scripts_cql/create-keyspace.cql
 
 for cqlFile in $(ls ./scripts_cql/changelog/*.cql); do
     echo Execute CQL file: "$cqlFile"
-    cqlsh -k "test" -f "$cqlFile"
+    dcqlsh -k "test" -f "$cqlFile"
 done
