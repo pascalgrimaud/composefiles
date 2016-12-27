@@ -1,7 +1,5 @@
 # Cassandra 2.1.15 with Docker
 
-Every commands must be executed under the folder: `2.1.15/`
-
 Pull the image:
 - `docker pull cassandra:2.1.15`
 
