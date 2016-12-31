@@ -1,0 +1,13 @@
+version: '2'
+services:
+    eclipse-luna2:
+        # image: eclipse:luna
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: eclipse-luna2
+        environment:
+            - DISPLAY=:0
+        volumes:
+            - /tmp/.X11-unix:/tmp/.X11-unix
+            - ~/volumes/eclipse/workspace:/home/developer/workspace
