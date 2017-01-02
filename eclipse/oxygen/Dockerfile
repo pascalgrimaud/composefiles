@@ -18,10 +18,10 @@ RUN \
     chown -R developer:developer /home/developer
 
 RUN \
-    # install eclipse Neon
-    wget -O /tmp/eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz \
-    http://mirror.ibcp.fr/pub/eclipse/technology/epp/downloads/release/neon/2/eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz && \
-    tar xzf /tmp/eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz -C /opt/ && \
+    # install eclipse Oxygen
+    wget -O /tmp/eclipse-jee-oxygen-M4-linux-gtk-x86_64.tar.gz \
+    http://mirror.ibcp.fr/pub/eclipse/technology/epp/downloads/release/oxygen/M4/eclipse-jee-oxygen-M4-linux-gtk-x86_64.tar.gz && \
+    tar xzf /tmp/eclipse-jee-oxygen-M4-linux-gtk-x86_64.tar.gz -C /opt/ && \
 
     # cleanup
     apt-get clean && \

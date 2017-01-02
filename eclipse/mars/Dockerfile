@@ -18,10 +18,10 @@ RUN \
     chown -R developer:developer /home/developer
 
 RUN \
-    # install eclipse Neon
-    wget -O /tmp/eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz \
-    http://mirror.ibcp.fr/pub/eclipse/technology/epp/downloads/release/neon/2/eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz && \
-    tar xzf /tmp/eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz -C /opt/ && \
+    # install eclipse Mars
+    wget -O /tmp/eclipse-jee-mars-R-linux-gtk-x86_64.tar.gz \
+    http://mirror.ibcp.fr/pub/eclipse/technology/epp/downloads/release/mars/R/eclipse-jee-mars-R-linux-gtk-x86_64.tar.gz && \
+    tar xzf /tmp/eclipse-jee-mars-R-linux-gtk-x86_64.tar.gz -C /opt/ && \
 
     # cleanup
     apt-get clean && \
