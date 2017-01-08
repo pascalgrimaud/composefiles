@@ -1,5 +1,13 @@
 # jhipster-registry
 
+<div align="center">
+  <a href="https://hub.docker.com/r/jhipster/jhipster-registry/">
+    <img src="https://raw.githubusercontent.com/jhipster/jhipster.github.io/master/images/logo/logo-jhipster2x.png">
+  </a>
+</div>
+
+# How to use
+
 Pull the image:
 - `docker pull jhipster/jhipster-registry`
 
@@ -17,3 +25,6 @@ All configuration are under the folder:
 
 Note:
 - the `eureka.client.serviceUrl.defaultZone` is not defined by Spring Config Server
+
+Access to the registry:
+- http://localhost:8761 with admin/admin

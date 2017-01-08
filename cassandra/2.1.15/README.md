@@ -1,4 +1,12 @@
-# Cassandra 2.1.15 with Docker
+# Cassandra 2.1.15
+
+<div align="center">
+  <a href="https://hub.docker.com/_/cassandra/">
+    <img src="https://raw.githubusercontent.com/docker-library/docs/fb8596d619703fc556e6d56e12584d8bfdf13785/cassandra/logo.png">
+  </a>
+</div>
+
+# How to use
 
 Pull the image:
 - `docker pull cassandra:2.1.15`

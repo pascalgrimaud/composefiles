@@ -1,4 +1,4 @@
-# Jenkins2 with Docker
+# Jenkins2
 
 <div align="center">
   <a href="https://hub.docker.com/_/jenkins/">
@@ -22,3 +22,6 @@ Stop Jenkins2:
 
 All data are under the volume:
 - `~/volumes/jenkins2`
+
+Access to Jenkins2:
+- http://localhost:18080
