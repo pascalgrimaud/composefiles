@@ -1,0 +1,10 @@
+version: '2'
+services:
+    jenkins2:
+        container_name: jenkins2
+        image: jenkins:2.32.1-alpine
+        volumes:
+            - ~/volumes/jenkins2:/var/jenkins_home
+        ports:
+            - 18080:8080
+            - 50000:50000
