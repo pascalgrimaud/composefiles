@@ -1,0 +1,17 @@
+version: '2'
+services:
+    machine1:
+        container_name: machine1
+        build: .
+        ports:
+            - '22001:22'
+    machine2:
+        container_name: machine2
+        build: .
+        ports:
+            - '22002:22'
+    machine3:
+        container_name: machine3
+        build: .
+        ports:
+            - '22003:22'
