@@ -4,11 +4,11 @@ services:
         container_name: jhipster-registry
         image: jhipster/jhipster-registry
         environment:
-            - SPRING_PROFILES_ACTIVE=dev
+            - SPRING_PROFILES_ACTIVE=prod,native,swagger
             - SECURITY_USER_PASSWORD=admin
             - SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS=file:./central-config/
-        ports:
-            - 8761:8761
+            - SERVER_PORT=8761
+            - _JAVA_OPTIONS=-Xmx256m -Xms128m
         volumes:
             - ./central-config:/central-config
-        network_mode: 'bridge'
+        network_mode: 'host'

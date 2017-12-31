@@ -9,7 +9,7 @@ jhipster:
             jwt:
                 secret: my-secret-token-to-change-in-production
 
-# eureka:
-#     client:
-#         serviceUrl:
-#             defaultZone: http://admin:admin@localhost:8761/eureka/
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://admin:admin@localhost:8761/eureka/

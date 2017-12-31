@@ -23,8 +23,5 @@ Stop jhipster-registry:
 All configuration are under the folder:
 - `central-config`
 
-Note:
-- the `eureka.client.serviceUrl.defaultZone` is not defined by Spring Config Server
-
 Access to the registry:
 - http://localhost:8761 with admin/admin

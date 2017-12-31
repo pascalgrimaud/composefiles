@@ -1,15 +1,24 @@
 version: '2'
 services:
-     jhipster-gateway:
+    jhipster-gateway:
         container_name: jhipster-gateway
         image: jhipster/jhipster-sample-app-gateway
         environment:
             - SPRING_OUTPUT_ANSI_ENABLED=ALWAYS
-            - SPRING_PROFILES_ACTIVE=dev,swagger
-            - SPRING_CLOUD_CONFIG_URI=http://admin:admin@registry:8761/config
-            - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://admin:admin@registry:8761/eureka
-        external_links:
-            - jhipster-registry:registry
-        ports:
-            - 8088:8080
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_CLOUD_CONFIG_URI=http://admin:admin@localhost:8761/config
+            - SPRING_DATASOURCE_URL=jdbc:mysql://localhost:53306/jhipstersamplegateway?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - SERVER_PORT=8088
+            - _JAVA_OPTIONS=-Xmx256m -Xms128m
+        network_mode: 'host'
+    jhipster-gateway-mysql:
+        container_name: jhipster-gateway-mysql
+        image: mysql:5.7.20
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+            - MYSQL_DATABASE=jhipstersamplegateway
+        command: mysqld --lower_case_table_names=1 --skip-ssl
         network_mode: 'bridge'
+        ports:
+            - "53306:3306"
