@@ -19,9 +19,9 @@ RUN \
 
 RUN \
     # install eclipse Oxygen
-    wget -O /tmp/eclipse-jee-oxygen-M4-linux-gtk-x86_64.tar.gz \
-    http://mirror.ibcp.fr/pub/eclipse/technology/epp/downloads/release/oxygen/M4/eclipse-jee-oxygen-M4-linux-gtk-x86_64.tar.gz && \
-    tar xzf /tmp/eclipse-jee-oxygen-M4-linux-gtk-x86_64.tar.gz -C /opt/ && \
+    wget -O /tmp/eclipse-jee-oxygen-2-linux-gtk-x86_64.tar.gz \
+    http://mirror.ibcp.fr/pub/eclipse/technology/epp/downloads/release/oxygen/2/eclipse-jee-oxygen-2-linux-gtk-x86_64.tar.gz && \
+    tar xzf /tmp/eclipse-jee-oxygen-2-linux-gtk-x86_64.tar.gz -C /opt/ && \
 
     # cleanup
     apt-get clean && \
