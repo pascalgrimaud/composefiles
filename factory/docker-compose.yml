@@ -24,7 +24,7 @@ services:
     ports:
       - "28081:8081"
   sonar:
-    image: sonarqube:7.1-alpine
+    image: sonarqube:7.1
     container_name: sonar
     ports:
       - "29000:9000"
